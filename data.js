@@ -145,3 +145,5 @@ const academicSupport = new Category (
   ],
   [skylineLibrary, theLearningCenter, theStemCenter]
 )
+
+const categories = [gettingInvolved, personalSupport, academicSupport];
