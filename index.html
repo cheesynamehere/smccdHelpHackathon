@@ -1,23 +1,58 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        I need help with... 
-        <input id="help-input" type="text" placeholder="What do you need help with?">
-        <button id="search-btn">Find Help</button>
-    </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+   @keyframes fadeIn {
+     from {
+       opacity: 0;
+       transform: translateY(16px);
+     }
+     to {
+       opacity: 1;
+       transform: translateY(0);
+     }
+    }
+  </style>
+</head>
+
+<body class="bg-stone-100 min-h-screen">
+  <div class="max-w-5xl mx-auto px-6 py-10">
+    <div class="flex items-center gap-4 justify-center bg-white rounded-2xl shadow-lg p-6">
+      
+      <h1 class="text-2xl font-bold">
+        skyline... i need help with...
+      </h1>
+
+      <input 
+        id="help-input" 
+        class="border rounded-xl p-3"
+      />
+
+      <button 
+        id="search-btn" 
+        class="bg-red-700 text-white px-5 py-3 rounded-xl hover:bg-red-800 shadow-lg">
+        Find Help
+      </button>
+
+        <button 
+        id="random-btn" 
+        class="cursor-pointer bg-red-700 text-white px-5 py-3 rounded-xl hover:bg-red-800 shadow-lg">
+        Random
+      </button>
+
+    </div>
+
+    <div id="results"></div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
